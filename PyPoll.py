@@ -28,3 +28,21 @@ with open(file_to_load) as election_data:
 
     # Print the file object
     print(election_data)
+
+# Create a filename variavle to a direct or indirect path to the file.
+file_to_save = os.path.join("analysis", "election_analysis.txt")
+# Using the open() function with the "w" mode we will write data to the file.
+open(file_to_save, "w")
+
+# Create a file variable to a direct or indirect path to the file.
+file_to_save = os.path.join("analysis", "election_analysis.txt")
+
+# Using the with statement open the file as a text file.
+with open(file_to_save, "w") as txt_file:
+
+    # Write three counties to the file.
+    txt_file.write("Counties in the Election\n-------------------\nArapahoe\nDenver\nJefferson")
+
+
+# Close the file
+txt_file.close()
